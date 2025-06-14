@@ -1,13 +1,12 @@
 import streamlit as st
 import pandas as pd
-import streamlit as st
-import pandas as pd
 import numpy as np
+import pandas_ta as ta
 from 張妍婷.order_Lo8 import Record
 from 張妍婷.indicator import KBar
 from 張妍婷.chart import ChartOrder_MA, ChartOrder_RSI_1, ChartOrder_RSI_2, ChartOrder_BBANDS
 import plotly.graph_objects as go
-from talib.abstract import SMA, RSI, BBANDS, MACD
+import plotly.express as px
 import itertools
 
 st.set_page_config(layout="wide")

@@ -1,6 +1,6 @@
 streamlit
 pandas
 numpy
+pandas-ta
 plotly
-ta-lib
 openpyxl
