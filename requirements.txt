@@ -1,6 +1,7 @@
-streamlit==1.31.1
+streamlit
 pandas
 numpy
 pandas-ta
-openpyxl
 plotly
+openpyxl
+matplotlib
