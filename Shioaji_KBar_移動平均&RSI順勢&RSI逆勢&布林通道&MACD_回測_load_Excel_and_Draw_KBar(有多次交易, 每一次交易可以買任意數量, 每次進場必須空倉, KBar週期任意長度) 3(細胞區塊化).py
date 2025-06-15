@@ -1,15 +1,11 @@
-#%%
-###### 載入必要模組
-#import haohaninfo
+import streamlit as st
 import pandas as pd
-from order_Lo8 import Record
 import numpy as np
-from talib.abstract import SMA,EMA, WMA, RSI, BBANDS, MACD, STOCH
-#import sys
-import datetime, indicator
-#import indicator_f_Lo2,datetime, indicator
-
-
+import pandas_ta as ta
+from order_Lo8 import Record
+from indicator import KBar
+from chart import ChartOrder_MA, ChartOrder_RSI_1, ChartOrder_RSI_2, ChartOrder_BBANDS
+import plotly.graph_objects as go
 
 
 #%%
@@ -681,28 +677,4 @@ params = {
 stoch = STOCH(KBar_dic, **params)
 ## STOCH 回傳的是一個 DataFrame，含兩欄：slowk 和 slowd
 KBar_dic['slowk'] = stoch['slowk']
-KBar_dic['slowd'] = stoch['slowd'
-
-
-
-
-
-
-#%%
-### Pandas DataFrame iteritems() Method:
-import pandas as pd
-
-data = {
-  "firstname": ["Sally", "Mary", "John"],
-  "age": [50, 40, 30]
-}
-df = pd.DataFrame(data)
-df.head()
-
-for x, y in df["firstname"].iteritems():
-  print(x)
-  print(y)
-  
-for x, y in df["age"].iteritems():
-  print(x)
-  print(y)
+KBar_dic['slowd'] = stoch['slowd']
